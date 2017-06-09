@@ -1,0 +1,132 @@
+Aligning inline images and text using text-align:
+
+You might find yourself wanting to align text to an image or logo within a website. Using the vertical-align property is an easy way to achieve some alignment!
+
+For an example we will use an image which is used inline within a <p> tag:
+
+<body>
+	<p><img src=“/image.png”>This is the text that is used inline with the image</p>
+</body>
+
+Without the use of the vertical-align property the text would align to the baseline of the image.
+
+Here is an example of how an image within a <p> tag would look by default (you can copy this copy the code below into: https://repl.it/languages/web_project )
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>sample</title>
+  </head>
+  <body>
+    <p><img src="https://www.mariowiki.com/images/thumb/5/5d/Box_Image_JP_-_Game_%26_Wario.png/120px-Box_Image_JP_-_Game_%26_Wario.png">top text</p>
+  </body>
+</html>
+
+But say I wanted the text to align to the top of the image instead - an easy way to go about doing this would be using vertical-align: text-top. In the example below I will assign an ID to the image that calls on the vertical-align: text top.
+
+CSS:
+#top {
+  vertical-align: text-top;
+  padding-right: 5px;
+}
+
+HTML:
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Title</title>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <p ><img id="top" src="https://www.mariowiki.com/images/thumb/5/5d/Box_Image_JP_-_Game_%26_Wario.png/120px-Box_Image_JP_-_Game_%26_Wario.png">top text</p>
+  </body>
+</html>
+
+The same idea could be applied to vertical-align: middle
+
+But say I wanted the text to align to the middle of the image instead - we could simply add an ID for vertical-align: middle.
+
+CSS:
+#top {
+  vertical-align: text-top;
+  padding-right: 5px;
+}
+
+#middle {
+  vertical-align: middle;
+  padding-right: 5px;
+}
+
+HTML:
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Title</title>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <p ><img id="top" src="https://www.mariowiki.com/images/thumb/5/5d/Box_Image_JP_-_Game_%26_Wario.png/120px-Box_Image_JP_-_Game_%26_Wario.png">top text</p>
+    <p><img id="middle" src="https://www.mariowiki.com/images/thumb/5/5d/Box_Image_JP_-_Game_%26_Wario.png/120px-Box_Image_JP_-_Game_%26_Wario.png">middle text</p>
+  </body>
+</html>
+
+Some other vertical-align values to play around with are: baseline and text-bottom!
+
+Copy the CSS and HTML into repl.it to see an example of all of them used together:
+
+CSS:
+p {
+  font-family: Helvetica, Sans-Serif;
+  font-weight: 300;
+  font-size: 34px;
+}
+
+p img {
+  width: 68px;
+  height: 68px;
+  border-radius: 50px;
+}
+
+#top {
+  vertical-align: text-top;
+  padding-right: 5px;
+}
+
+#middle {
+  vertical-align: middle;
+  padding-right: 5px;
+}
+
+#bottom {
+  vertical-align: text-bottom;
+  padding-right: 5px;
+}
+
+#baseline {
+  vertical-align: baseline;
+  padding-right: 5px;
+}
+
+HTML:
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <p><img id="top" src="https://www.mariowiki.com/images/thumb/5/5d/Box_Image_JP_-_Game_%26_Wario.png/120px-Box_Image_JP_-_Game_%26_Wario.png">top text</p>
+    <p><img id="middle" src="https://www.mariowiki.com/images/thumb/5/5d/Box_Image_JP_-_Game_%26_Wario.png/120px-Box_Image_JP_-_Game_%26_Wario.png">middle text</p>
+    <p><img id="bottom" src="https://www.mariowiki.com/images/thumb/5/5d/Box_Image_JP_-_Game_%26_Wario.png/120px-Box_Image_JP_-_Game_%26_Wario.png">bottom text</p>
+    <p><img id="baseline" src="https://www.mariowiki.com/images/thumb/5/5d/Box_Image_JP_-_Game_%26_Wario.png/120px-Box_Image_JP_-_Game_%26_Wario.png">baseline text</p>
+    <script src="index.js"></script>
+  </body>
+</html>

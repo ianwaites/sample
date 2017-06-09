@@ -1,2 +1,3 @@
-# sample
-Reading Sample
+# Using the vertical-align property
+
+See Sample.txt
